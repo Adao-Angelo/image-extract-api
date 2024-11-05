@@ -28,5 +28,5 @@ def process_image_endpoint():
     else:
         return jsonify({"error": "Erro ao baixar a imagem"}), 500
 
-if __name__ == "__app__":
+if __name__ == "__main__":
     app.run(debug=True)
