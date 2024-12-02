@@ -8,8 +8,6 @@ def download_image(image_url, folder_path='temp'):
     file_extension = os.path.splitext(image_url.split('/')[-1])[-1]
     
     file_name = os.path.join(folder_path, f"file{file_extension}")
-
-
     response = requests.get(image_url, stream=True)
     if response.status_code == 200:
         with open(file_name, 'wb') as file:
@@ -22,11 +20,9 @@ def download_image(image_url, folder_path='temp'):
         return None
 
 def process_image(image_path):
-  
     print(f"Processing image at {image_path}...")
 
 def delete_image(image_path):
-  
     if os.path.exists(image_path):
         os.remove(image_path)
         print(f"Image deleted: {image_path}")
