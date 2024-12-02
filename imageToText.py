@@ -9,7 +9,7 @@ load_dotenv()
 hf_key = os.getenv('HF_KEY')
 
 API_URL = "https://api-inference.huggingface.co/models/Salesforce/blip-image-captioning-base"
-headers = {"Authorization": "Bearer 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"}
+headers = {"Authorization": f"Bearer {hf_key}"}
 
 def query(filename):
     with open(filename, "rb") as f:
