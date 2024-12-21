@@ -1,8 +1,6 @@
-
 import requests
 import os
 
-# Accessing environment variables
 hf_key = os.getenv('HF_kEY')
 
 API_URL = "https://api-inference.huggingface.co/models/Salesforce/blip-image-captioning-base"
